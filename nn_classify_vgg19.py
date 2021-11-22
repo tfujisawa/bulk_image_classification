@@ -19,8 +19,10 @@ from sklearn.model_selection import train_test_split
 
 if len(sys.argv) > 3:
     size_min, size_max, size_step = int(sys.argv[3]), int(sys.argv[4]), int(sys.argv[5])
+    test_size = int(sys.argv[6])
 else:
     size_min, size_max, size_step = 100, 700, 100
+    test_size = 200
 
 model = VGG19(weights="imagenet", include_top=False, input_shape=(255,255,3))
 
@@ -66,10 +68,10 @@ clab2 = np.concatenate([img_gen2.next()[1] for i in range(0, img_gen2.samples, 1
 
 res = []
 for size in range(size_min, size_max+1, size_step):
-    for k in range(1):
+    for k in range(10):
         ind = np.zeros(len(clab), dtype=np.bool)
 
-        train_x, test_x, train_y, test_y = train_test_split(vgg_features, clab, test_size=200, train_size=size)
+        train_x, test_x, train_y, test_y = train_test_split(vgg_features, clab, test_size=test_size, train_size=size)
 
         ##5th convolution layer -> 2 dense layers + last classification layer
         nclass = 12
