@@ -75,7 +75,7 @@ python3 domain_classifier.py bulk_images_GH bulk_images_LH
 
 This command will do dataset classification from bulk_images_GH and bulk_images_LH.
 
-###Workflow of manuscript
+### Workflow of manuscript
 
 ```
 #CNN model. Within/between dataset classificiation
