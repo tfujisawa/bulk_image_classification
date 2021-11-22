@@ -21,11 +21,11 @@ git clone htts://...
 
 ## Code descriptions:
 
-* nn_classify_vgg19.py: image classification with VGG19 feature extraction + a neural network model.
+* **nn_classify_vgg19.py**: image classification with VGG19 feature extraction + a neural network model.
 
-* dann_classify_vgg19.py: image classification with VGG19 feature extraction +  Domain Adversarial traing of Neural Network (DANN, Ganin et al. 2017).
+* **dann_classify_vgg19.py**: image classification with VGG19 feature extraction +  Domain Adversarial traing of Neural Network (DANN, Ganin et al. 2017).
 
-* domain_classifier.py: dataset classification for quantifying dataset similarity ().
+* **domain_classifier.py**: dataset classification for quantifying dataset similarity ().
 
 
 ## How to run:
