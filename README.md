@@ -75,3 +75,20 @@ python3 domain_classifier.py bulk_images_GH bulk_images_LH
 
 This command will do dataset classification from bulk_images_GH and bulk_images_LH.
 
+###Workflow of manuscript
+
+```
+#CNN model. Within/between dataset classificiation
+python3 nn_classify_vgg19.py LH LH 100 700 100 200 #LH->LH, within-dataset classification
+
+python3 nn_classify_vgg19.py LL LH 50 250 50 50 #LL->LL and LL->LH
+python3 nn_classify_vgg19.py GH LH 100 900 100 200 #GH->GH and GH-> LH
+python3 nn_classify_vgg19.py GH LL 100 900 100 200 #GH->GH and GH-> LL
+
+#CNN + DANN. Between dataset classification
+python3 dann_classify_vgg19.py LL LH 300 800 100 200 #LL -> LH
+python3 dann_classify_vgg19.py GH LH 400 1400 200 400 #GH -> LH
+python3 dann_classify_vgg19.py GH LL 300 1000 200 400 #GH -> LL
+
+```
+
