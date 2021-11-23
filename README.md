@@ -3,6 +3,7 @@
 ## Dependencies:
 	* Python (3.8 or later)
 	* Numpy (1.19 or later)
+	* Scikit-learn (0.22 or later)
 	* TensorFlow (2.5 or later)
 
 A typical command for installing dependency libraries is "pip":
@@ -10,6 +11,7 @@ A typical command for installing dependency libraries is "pip":
 ```
 pip3 install numpy
 pip3 install tensorflow==2.5.0
+...
 ```
 
 Hoever, this may vary depending on your environment. "conda" is another common command.
@@ -27,6 +29,7 @@ git clone htts://...
 
 * **domain_classifier.py**: dataset classification for quantifying dataset similarity ().
 
+* **confusion_matrix_nn.py**: detailed prediction results of VGG19+NN model.
 
 ## How to run:
 ### Classification with CNN
