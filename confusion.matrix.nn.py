@@ -95,7 +95,8 @@ with open("pred.{0}.N{1}.txt".format(os.path.basename(indir), size), "w") as f:
         f.write("{0}\t{1}\t{2}\t{3}\t".format(test_img_nam[i],nam[i], int(test_y[i]), suc[i]) + "\t".join(["{0:5f}".format(i) for i in row]) + "\n")
 
 print ("source confusion matrix:")
-print (confusion_matrix(pred_class, test_y))
+print ("-- true \n|\npredicted ")
+print (confusion_matrix(test_y, pred_class).T)
 
 #Prediction on a target dataset
 pred2 = nn.predict(vgg_features2)
@@ -111,4 +112,5 @@ with open("pred.{0}-{1}.N{2}.txt".format(os.path.basename(indir), os.path.basena
         f.write("{0}\t{1}\t{2}\t{3}\t".format(img_nam2[i],nam2[i], int(clab2[i]), suc2[i]) + "\t".join(["{0:5f}".format(i) for i in row]) + "\n")
 
 print ("source -> target confusion matrix")
-print (confusion_matrix(pred_class2, clab2))
+print ("-- true \n|\npredicted ")
+print (confusion_matrix(clab2, pred_class2).T)
