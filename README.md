@@ -14,7 +14,7 @@ pip3 install tensorflow==2.5.0
 ...
 ```
 
-Hoever, this may vary depending on your environment. "conda" is another common command.
+However, this may vary depending on your environment. "conda" is another common command.
 
 ## How to download codes:
 ```
