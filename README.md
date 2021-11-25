@@ -36,14 +36,14 @@ git clone htts://...
 ```
 python3 nn_classify_vgg19.py [source image folder] [target image folder] [min training images] [max training images] [step] [number of test images]
 ```
-Example: 
+#### Example:
 ```
 python3 nn_classify_vgg19.py bulk_images_GH bulk_images_LH 100 900 100 200
 ```
 
 This command trains a model with images from bulk_images_GH (source) and tests with 200 images from the same source folder. Then, the model predicts all images from bulk_images_LH (target) and the accuracy is recorded. Training/Testing is repeated 10 times with the increasing number of training images between 100 and 900 with 100 intervals.
 
-Make sure that the target folder has identical folder structue with the source folder. 
+Make sure that the target folder has identical folder structue with the source folder.
 
 - Source folder
 	- Taxon1
@@ -53,30 +53,41 @@ Make sure that the target folder has identical folder structue with the source f
 	- Taxon1
 	- Taxon2
 	-  ...
-	
+
 ### Classification with CNN + DANN
-	
+
 ```
 python3 dann_classify_vgg19.py [source image folder] [target image folder] [min training images] [max training images] [step] [number of test images]
 ```
-Example: 
+#### Example:
 ```
 python3 dann_classify_vgg19.py bulk_images_GH bulk_images_LH 100 900 100 200
 ```
 
 This command trains a DANN model with images from both bulk_images_GH (source) and bulk_images_LH, and predict images from the target.
 
-### Dataset classification 
+### Dataset classification
 ```
 python3 domain_classifier.py [source] [target]
 
 ```
-Example:
+#### Example:
 ```
 python3 domain_classifier.py bulk_images_GH bulk_images_LH
 ```
 
 This command will do dataset classification from bulk_images_GH and bulk_images_LH.
+
+### Detailed classification results and confusion matrix
+```
+python3 confusion_matrix_nn.py [source image folder] [target image folder] [number of training images]
+```
+#### Example:
+```
+python3 confusion_matrix_nn.py bulk_images_GH bulk_images_LH 600
+```
+This command trains a NN model with 600 images from bulk_images_GH folder and predict images from bulk_images_LH folder, then detailed results are output to files.
+
 
 ### Workflow of manuscript
 
@@ -94,4 +105,3 @@ python3 dann_classify_vgg19.py GH LH 400 1400 200 400 #GH -> LH
 python3 dann_classify_vgg19.py GH LL 300 1000 200 400 #GH -> LL
 
 ```
-
