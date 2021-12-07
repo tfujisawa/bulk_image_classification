@@ -15,6 +15,7 @@ from tensorflow.keras.applications.vgg19 import preprocess_input
 
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix
+from sklearn.metrics import classification_report 
 
 model = VGG19(weights="imagenet", include_top=False, input_shape=(255,255,3))
 
@@ -98,6 +99,8 @@ print ("source confusion matrix:")
 print ("-- true \n|\npredicted ")
 print (confusion_matrix(test_y, pred_class).T)
 
+print (classification_report(test_y, pred_class))
+
 #Prediction on a target dataset
 pred2 = nn.predict(vgg_features2)
 pred_class2 = np.argmax(pred2, axis=1)
@@ -114,3 +117,5 @@ with open("pred.{0}-{1}.N{2}.txt".format(os.path.basename(indir), os.path.basena
 print ("source -> target confusion matrix")
 print ("-- true \n|\npredicted ")
 print (confusion_matrix(clab2, pred_class2).T)
+
+print (classification_report(clab2, pred_class2))
