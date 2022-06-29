@@ -1,7 +1,10 @@
 # Bulk insect image classification with CNNs.
 Codes for classification of bulk biodiversity images.
+
 For details of this project, please refer to the manuscript:
+
 Image-based taxonomic classification of bulk biodiversity samples using deep learning and domain adaptation
+
 https://www.biorxiv.org/content/10.1101/2021.12.22.473797v1.abstract
 
 ## Dependencies:
