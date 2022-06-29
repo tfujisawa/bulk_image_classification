@@ -1,4 +1,8 @@
 # Bulk insect image classification with CNNs.
+Codes for classification of bulk biodiversity images.
+For details of this project, please refer to the manuscript:
+Image-based taxonomic classification of bulk biodiversity samples using deep learning and domain adaptation
+https://www.biorxiv.org/content/10.1101/2021.12.22.473797v1.abstract
 
 ## Dependencies:
 	* Python (3.8 or later)
@@ -89,7 +93,7 @@ python3 confusion_matrix_nn.py bulk_images_GH bulk_images_LH 600
 This command trains a NN model with 600 images from bulk_images_GH folder and predict images from bulk_images_LH folder, then detailed results are output to files.
 
 
-### Workflow of manuscript
+### Workflow of the manuscript
 
 ```
 #CNN model. Within/between dataset classificiation
