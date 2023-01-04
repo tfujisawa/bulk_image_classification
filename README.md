@@ -7,7 +7,7 @@ Image-based taxonomic classification of bulk biodiversity samples using deep lea
 
 https://www.biorxiv.org/content/10.1101/2021.12.22.473797v1.abstract
 
-Image data sets used in this study are availabel in Zenodo and Dryad.
+Image data sets used in this study are available in Zenodo and Dryad.
 
 https://zenodo.org/record/5823545#.Y7TlbNXP0uW
 
